@@ -13,7 +13,7 @@ use Dakujem\Strata\Contracts\IndicatesAuthorizationFault;
  */
 class Forbidden extends ClientHttpExceptionAbstract implements IndicatesAuthorizationFault
 {
-    public static string $suggestedMessage = 'Forbidden.';
+    public static string $suggestedMessage = 'Forbidden';
 
     public function suggestStatusCode(): int
     {

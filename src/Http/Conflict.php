@@ -13,7 +13,7 @@ use Dakujem\Strata\Contracts\IndicatesConflict;
  */
 class Conflict extends ClientHttpExceptionAbstract implements IndicatesConflict
 {
-    public static string $suggestedMessage = 'Transaction not allowed.';
+    public static string $suggestedMessage = 'Conflict';
 
     public function suggestStatusCode(): int
     {
