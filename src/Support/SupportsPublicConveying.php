@@ -6,7 +6,8 @@ namespace Dakujem\Strata\Support;
 
 /**
  * Interface for "conveying" error context to clients.
- * The mechanism is used to automatically generate error information in API responses in cases of error occurrence.
+ *
+ * The mechanism is used to generate coherent error information for the clients.
  */
 interface SupportsPublicConveying
 {

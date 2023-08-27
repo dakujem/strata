@@ -6,7 +6,9 @@ namespace Dakujem\Strata\Support;
 
 /**
  * Interface for carrying "public context" by exceptions.
- * The mechanism is used to automatically generate error information in API responses in cases of error occurrence.
+ *
+ * The mechanism is used to generate error information for the clients
+ * in cases of error occurrence.
  */
 interface SupportsPublicContext
 {

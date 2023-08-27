@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Dakujem\Strata\Support;
 
 /**
- * Implements interface:
+ * Compound trait that implements the `SupportsInternals` interface:
  * @see SupportsInternals
  */
 trait SupportInternals

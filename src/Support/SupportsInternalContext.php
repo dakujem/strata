@@ -8,7 +8,7 @@ namespace Dakujem\Strata\Support;
  * Interface for carrying "internal context" by exceptions.
  *
  * Internal context SHOULD NOT be exposed to clients
- * and SHOULD be used for internal purposes only (debugging, logging, analytics, etc.).
+ * and SHOULD be used for internal purposes only (reporting, debugging, logging, analytics, etc.).
  */
 interface SupportsInternalContext
 {

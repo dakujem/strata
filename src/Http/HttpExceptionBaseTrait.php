@@ -6,7 +6,7 @@ namespace Dakujem\Strata\Http;
 
 use Dakujem\Strata\Support\SuggestsErrorMessage;
 use Dakujem\Strata\Support\SuggestsHttpStatus;
-use Dakujem\Strata\Support\SupportContextAwareExceptions;
+use Dakujem\Strata\Support\ContextStrata;
 use Dakujem\Strata\Support\SupportsInternalContext;
 use Dakujem\Strata\Support\SupportsInternalExplanation;
 use Dakujem\Strata\Support\SupportsPublicContext;
@@ -28,7 +28,7 @@ use Throwable;
  */
 trait HttpExceptionBaseTrait
 {
-    use SupportContextAwareExceptions;
+    use ContextStrata;
 
     public static string $suggestedMessage = 'Bad request';
 

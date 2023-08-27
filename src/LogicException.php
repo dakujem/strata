@@ -5,10 +5,8 @@ declare(strict_types=1);
 namespace Dakujem\Strata;
 
 use Dakujem\Strata\Contracts\IndicatesServerFault;
-use Dakujem\Strata\Support\SupportContextAwareExceptions;
-use Dakujem\Strata\Support\SupportsInternals;
-use Dakujem\Strata\Support\SupportsPublicContext;
-use Dakujem\Strata\Support\SupportsPublicConveying;
+use Dakujem\Strata\Support\SupportsContextStrata;
+use Dakujem\Strata\Support\ContextStrata;
 use Throwable;
 
 /**
@@ -16,11 +14,9 @@ use Throwable;
  */
 class LogicException extends \LogicException implements
     IndicatesServerFault,
-    SupportsInternals,
-    SupportsPublicContext,
-    SupportsPublicConveying
+    SupportsContextStrata
 {
-    use SupportContextAwareExceptions;
+    use ContextStrata;
 
     public function __construct($message = null, $code = 0, Throwable $previous = null)
     {

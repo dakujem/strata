@@ -5,10 +5,9 @@ declare(strict_types=1);
 namespace Dakujem\Strata\Http;
 
 use Dakujem\Strata\Contracts\IndicatesClientFault;
+use Dakujem\Strata\Support\SupportsContextStrata;
 use Dakujem\Strata\Support\SuggestsErrorMessage;
 use Dakujem\Strata\Support\SuggestsHttpStatus;
-use Dakujem\Strata\Support\SupportsInternals;
-use Dakujem\Strata\Support\SupportsPublicContext;
 use Dakujem\Strata\Support\SupportsPublicConveying;
 
 /**
@@ -20,9 +19,7 @@ use Dakujem\Strata\Support\SupportsPublicConveying;
  */
 abstract class ClientHttpExceptionAbstract extends \RuntimeException implements
     IndicatesClientFault,
-    SupportsInternals,
-    SupportsPublicContext,
-    SupportsPublicConveying,
+    SupportsContextStrata,
     SuggestsHttpStatus,
     SuggestsErrorMessage
 {
