@@ -22,7 +22,7 @@ trait SupportPublicContext
      *
      * Passing `null` with a key will remove the information under the key.
      */
-    public function pass(mixed $value, ?string $key = null): self
+    public function pass(mixed $value, string|int|null $key = null): self
     {
         if ($value === null) {
             if ($key !== null) {

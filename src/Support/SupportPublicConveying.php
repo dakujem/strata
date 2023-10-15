@@ -57,5 +57,5 @@ trait SupportPublicConveying
         return 'A system error has occurred. We are sorry for the inconvenience.';
     }
 
-    abstract public function pass(mixed $value, ?string $key = null): self;
+    abstract public function pass(mixed $value, string|int|null $key = null): self;
 }

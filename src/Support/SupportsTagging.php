@@ -16,7 +16,7 @@ interface SupportsTagging
      *
      * Both plain string tags and key-tag pairs SHOULD be supported.
      */
-    public function tag(string $tag, ?string $key = null): self;
+    public function tag(string $tag, string|int|null $key = null): self;
 
     /**
      * Return a list of tags.

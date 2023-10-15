@@ -19,7 +19,7 @@ interface SupportsInternalContext
      * Optionally specify a key.
      * Passing the same key SHOULD overwrite the previous value.
      */
-    public function pin(mixed $value, ?string $key = null): self;
+    public function pin(mixed $value, string|int|null $key = null): self;
 
     /**
      * Get the internal context as an array of pinned values.

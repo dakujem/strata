@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Dakujem\Strata\Http;
 
 use Dakujem\Strata\Contracts\IndicatesClientFault;
-use Dakujem\Strata\Support\SupportsContextStrata;
 use Dakujem\Strata\Support\SuggestsErrorMessage;
 use Dakujem\Strata\Support\SuggestsHttpStatus;
+use Dakujem\Strata\Support\SupportsContextStrata;
 use Dakujem\Strata\Support\SupportsPublicConveying;
 
 /**

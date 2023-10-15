@@ -19,7 +19,7 @@ interface SupportsPublicContext
      * Optionally specify a key.
      * Passing the same key SHOULD overwrite the previous value.
      */
-    public function pass(mixed $value, ?string $key = null): self;
+    public function pass(mixed $value, string|int|null $key = null): self;
 
     /**
      * Get the internal context as an array of passed values.
