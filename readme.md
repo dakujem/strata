@@ -1,6 +1,13 @@
 # Strata
 
+[![Test Suite](https://github.com/dakujem/strata/actions/workflows/php-test.yml/badge.svg)](https://github.com/dakujem/strata/actions/workflows/php-test.yml)
+[![Coverage Status](https://coveralls.io/repos/github/dakujem/strata/badge.svg?branch=tests)](https://coveralls.io/github/dakujem/strata?branch=tests)
+
 Contracts and implementations for layered exception handling mechanisms.
+
+>
+> 💿 `composer require dakujem/strata`
+>
 
 
 ## TL;DR
@@ -307,4 +314,8 @@ Explore the provided support traits and interfaces.
 | `SupportsPublicConveying`      | `SupportPublicConveying`      | coherent error details for clients    | `convey`  |
 
 
+## Compatibility and support
 
+This package requires **PHP `>=8.0`**. There are no other external dependencies.
+
+> A backported version for PHP 7.4 exists: [`dakujem/strata74`](https://github.com/dakujem/strata74)

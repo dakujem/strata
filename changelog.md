@@ -4,7 +4,7 @@
 > 📖 back to [readme](readme.md)
 
 Strata follows semantic versioning.\
-Any issues should be reported.
+Please report possible issues.
 
 
 ## v1.0
