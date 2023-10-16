@@ -18,7 +18,7 @@ class GenericClientHttpException extends ClientHttpExceptionAbstract
         return $this->httpStatusCode ?? $this->defaultStatusCode();
     }
 
-    public function setHttpStatus(?int $code): self
+    public function setHttpStatus(?int $code): static
     {
         $this->httpStatusCode = $code;
         return $this;
