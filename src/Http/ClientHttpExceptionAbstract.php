@@ -23,12 +23,9 @@ abstract class ClientHttpExceptionAbstract extends \RuntimeException implements
     SuggestsHttpStatus,
     SuggestsErrorMessage
 {
-    use HttpExceptionBaseTrait;
+    use HttpClientContextStrata;
 
-    public function suggestStatusCode(): int
-    {
-        return 400; // 400 Bad Request
-    }
+    public static string $suggestedMessage = 'Bad request';
 
     /**
      * WARNING
