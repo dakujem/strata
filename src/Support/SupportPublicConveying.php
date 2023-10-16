@@ -31,7 +31,7 @@ trait SupportPublicConveying
         mixed $meta = null,
         ?int $status = null,
         ?string $code = null,
-    ): self {
+    ): static {
         return $this->pass(new ErrorContainer(
             message: $message ?? $this->getDefaultMessageToConvey(),
             source: $source,
