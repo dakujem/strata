@@ -11,6 +11,9 @@
   "require": {
     "php": ">=8.0"
   },
+  "require-dev": {
+    "nette/tester": "^2.4.1"
+  },
   "autoload": {
     "psr-4": {
       "Dakujem\\Strata\\": "src/"
@@ -20,5 +23,8 @@
     "branch-alias": {
       "dev-trunk": "1.0.x-dev"
     }
+  },
+  "scripts": {
+    "test:ci": "@php vendor/bin/tester tests -C"
   }
 }
