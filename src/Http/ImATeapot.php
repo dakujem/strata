@@ -13,7 +13,9 @@ use Dakujem\Strata\Contracts\IndicatesGoodMood;
  */
 class ImATeapot extends ClientHttpExceptionAbstract implements IndicatesGoodMood
 {
-    public static string $suggestedMessage = 'I\'m a teapot';
+    public const DefaultErrorMessage = 'I\'m a teapot';
+
+    public static string $suggestedMessage = self::DefaultErrorMessage;
 
     public function suggestStatusCode(): int
     {

@@ -25,7 +25,12 @@ abstract class ClientHttpExceptionAbstract extends \RuntimeException implements
 {
     use HttpClientContextStrata;
 
-    public static string $suggestedMessage = 'Bad request';
+    public static string $suggestedMessage = BadRequest::DefaultErrorMessage;
+
+    public function suggestErrorMessage(): string
+    {
+        return static::$suggestedMessage;
+    }
 
     /**
      * WARNING

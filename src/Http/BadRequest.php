@@ -11,4 +11,5 @@ namespace Dakujem\Strata\Http;
  */
 class BadRequest extends ClientHttpExceptionAbstract
 {
+    public const DefaultErrorMessage = 'Bad request';
 }

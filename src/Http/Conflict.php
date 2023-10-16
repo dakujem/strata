@@ -13,7 +13,9 @@ use Dakujem\Strata\Contracts\IndicatesConflict;
  */
 class Conflict extends ClientHttpExceptionAbstract implements IndicatesConflict
 {
-    public static string $suggestedMessage = 'Conflict';
+    public const DefaultErrorMessage = 'Conflict';
+
+    public static string $suggestedMessage = self::DefaultErrorMessage;
 
     public function suggestStatusCode(): int
     {

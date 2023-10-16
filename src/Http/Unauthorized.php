@@ -13,7 +13,9 @@ use Dakujem\Strata\Contracts\IndicatesAuthenticationFault;
  */
 class Unauthorized extends ClientHttpExceptionAbstract implements IndicatesAuthenticationFault
 {
-    public static string $suggestedMessage = 'Unauthorized';
+    public const DefaultErrorMessage = 'Unauthorized';
+
+    public static string $suggestedMessage = self::DefaultErrorMessage;
 
     public function suggestStatusCode(): int
     {

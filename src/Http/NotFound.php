@@ -13,7 +13,9 @@ use Dakujem\Strata\Contracts\IndicatesMissingResource;
  */
 class NotFound extends ClientHttpExceptionAbstract implements IndicatesMissingResource
 {
-    public static string $suggestedMessage = 'Not found';
+    public const DefaultErrorMessage = 'Not found';
+
+    public static string $suggestedMessage = self::DefaultErrorMessage;
 
     public function suggestStatusCode(): int
     {

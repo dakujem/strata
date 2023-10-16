@@ -13,7 +13,9 @@ use Dakujem\Strata\Contracts\IndicatesInvalidInput;
  */
 class UnprocessableContent extends ClientHttpExceptionAbstract implements IndicatesInvalidInput
 {
-    public static string $suggestedMessage = 'Unprocessable content';
+    public const DefaultErrorMessage = 'Unprocessable content';
+
+    public static string $suggestedMessage = self::DefaultErrorMessage;
 
     public function suggestStatusCode(): int
     {
