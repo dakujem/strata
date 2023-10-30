@@ -301,17 +301,21 @@ class MySpecificException extends WhateverBaseException implements SupportsConte
 }
 ```
 
-If only selected mechanisms are needed, strata are flexible enough.
+If only selected mechanisms are needed, use the table below to pick specific interfaces and traits:
 
-Explore the provided support traits and interfaces.
+| Method                  | Mechanism                             | Implement interface            | Use trait                     |
+|:------------------------|:--------------------------------------|:-------------------------------|:------------------------------|
+| `pin`                   | generic internal metadata "pinning"   | `SupportsInternalContext`      | `SupportInternalContext`      |
+| `explain`               | human-readable details for developers | `SupportsInternalExmplanation` | `SupportInternalExmplanation` |
+| `tag`                   | machine-processable tags              | `SupportsTagging`              | `SupportTagging`              |
+| `pass`                  | public data for clients               | `SupportsPublicContext`        | `SupportPublicContext`        |
+| `convey`                | coherent error details for clients    | `SupportsPublicConveying`      | `SupportPublicConveying`      |
+| `pin`, `tag`, `explain` | internal metadata only                | `SupportsInternals`            | `SupportInternals`            |
+| all of them             | all of them                           | `SupportsContextStrata`        | `ContextStrata`               |
 
-| Interface                      | Implementation trait          | Mechanism                             | Method    |
-|:-------------------------------|:------------------------------|:--------------------------------------|:----------|
-| `SupportsInternalContext`      | `SupportInternalContext`      | generic internal metadata "pinning"   | `pin`     |
-| `SupportsInternalExmplanation` | `SupportInternalExmplanation` | human-readable details for developers | `explain` |
-| `SupportsTagging`              | `SupportTagging`              | machine-processable tags              | `tag`     |
-| `SupportsPublicContext`        | `SupportPublicContext`        | public data for clients               | `pass`    |
-| `SupportsPublicConveying`      | `SupportPublicConveying`      | coherent error details for clients    | `convey`  |
+To provide throwables with HTTP capabilities, implement the following trivial interfaces:
+- `SuggestsErrorMessage` to suggest error messages to your error handlers
+- `SuggestsHttpStatus` to suggest HTTP status codes to your error handlers
 
 
 ## Compatibility and support
