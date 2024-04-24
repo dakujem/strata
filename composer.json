@@ -26,5 +26,11 @@
   },
   "scripts": {
     "test:ci": "@php vendor/bin/tester tests -C"
+  },
+  "archive": {
+    "exclude": [
+      "/tests",
+      "/.github"
+    ]
   }
 }
