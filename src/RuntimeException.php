@@ -18,7 +18,7 @@ class RuntimeException extends \RuntimeException implements
 {
     use ContextStrata;
 
-    public function __construct($message = null, $code = 0, Throwable $previous = null)
+    public function __construct(?string $message = null, ?int $code = 0, ?Throwable $previous = null)
     {
         parent::__construct($message ?? '', $code ?? 0, $previous);
     }
