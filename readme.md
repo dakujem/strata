@@ -8,6 +8,8 @@ Contracts and implementations for layered exception handling mechanisms.
 >
 > 💿 `composer require dakujem/strata`
 >
+> 📒 [Changelog](changelog.md)
+>
 
 
 ## TL;DR
