@@ -20,7 +20,7 @@ trait SupportInternalExplanation
     /**
      * Add an explanation for internal purposes (logging, debugging, etc.).
      */
-    public function explain(?string $explanation): self
+    public function explain(?string $explanation): static
     {
         $this->explanation = $explanation;
         return $this;

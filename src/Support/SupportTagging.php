@@ -22,7 +22,7 @@ trait SupportTagging
      *
      * Both plain string tags and key-tag pairs are supported.
      */
-    public function tag(string $tag, string|int|null $key = null): self
+    public function tag(string $tag, string|int|null $key = null): static
     {
         if ($key !== null) {
             $this->tags[$key] = $tag;
@@ -43,7 +43,7 @@ trait SupportTagging
     /**
      * Replace current tags with given ones.
      */
-    public function replaceTags(array $tags): self
+    public function replaceTags(array $tags): static
     {
         $this->tags = [];
         // iterate over the keys for type safety

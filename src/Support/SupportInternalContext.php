@@ -24,7 +24,7 @@ trait SupportInternalContext
      *
      * Passing `null` with a key will remove the information under the key.
      */
-    public function pin(mixed $value, string|int|null $key = null): self
+    public function pin(mixed $value, string|int|null $key = null): static
     {
         if ($value === null) {
             if ($key !== null) {
@@ -51,7 +51,7 @@ trait SupportInternalContext
     /**
      * Replace current context with given one.
      */
-    public function replaceContext(array $context): self
+    public function replaceContext(array $context): static
     {
         $this->context = $context;
         return $this;

@@ -22,7 +22,7 @@ trait SupportPublicContext
      *
      * Passing `null` with a key will remove the information under the key.
      */
-    public function pass(mixed $value, string|int|null $key = null): self
+    public function pass(mixed $value, string|int|null $key = null): static
     {
         if ($value === null) {
             if ($key !== null) {
@@ -49,7 +49,7 @@ trait SupportPublicContext
     /**
      * Completely replace current client-facing context with given one.
      */
-    public function replacePublicContext(array $context): self
+    public function replacePublicContext(array $context): static
     {
         $this->publicContext = $context;
         return $this;
